@@ -1,6 +1,6 @@
-# Testing strategy: Unit tests for endpoints using FastAPI's TestClient
+# Threading and Multiprocessing in Python: Effective Concurrency Strategies to Improve Performance
 
-A simple FastAPI application demonstrating Clean Architecture principles with a focus on modularity, testability, and separation of concerns.
+A simple FastAPI application with Clean Architecture principles, with endpoints that simulate concurrency using threading and multiprocessing.
 
 ## Features
 
@@ -40,10 +40,12 @@ Here’s a **tree diagram** of the project structure you can insert directly int
 │   │   ├── routes.py                # Entry point for all API routes
 │   │   └── endpoints/               
 │   │       └── users.py             # User-related route handlers
+│   │       └── concurrency.py       # Concurrency-related route handlers
 │   ├── models/                      
 │   │   └── user.py                  # Pydantic models for input/output validation
 │   ├── services/                    
 │   │   └── user_service.py          # Business logic layer (application use cases)
+│   │   └── concurrency_service.py   # Service for handling concurrency logic
 │   ├── ports/                       
 │   │   └── db_port.py               # Interfaces/abstract classes (Hexagonal Architecture)
 │   ├── adapters/                    
@@ -72,7 +74,7 @@ Here’s a **tree diagram** of the project structure you can insert directly int
 | Folder / File           | Purpose & Responsibility                                                               |
 |-------------------------|----------------------------------------------------------------------------------------|
 | `src/main.py`           | Creates the FastAPI app, includes routers, and serves as the entry point               |
-| `src/api/routes.py`     | Organizes all route groups (e.g., `/users`, `/products`, etc.)                         |
+| `src/api/routes.py`     | Organizes all route groups (e.g., `/users`, `/concurrency`, etc.)                      |
 | `src/api/endpoints/`    | Contains route handlers, handling request/response and delegating to services          |
 | `src/models/`           | Defines data contracts using Pydantic for input validation and output schemas          |
 | `src/services/`         | Contains application-level use cases (business logic), keeping route handlers thin     |
