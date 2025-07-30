@@ -1,0 +1,9 @@
+site_name: Python Codebase Architecture Guide
+nav:
+  - Home: index.md
+  - Project Structure: project_structure.md
+  - Design Patterns: design_patterns.md
+  - Testing: testing.md
+  - Tooling: tooling.md
+theme:
+  name: material
